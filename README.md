@@ -2,7 +2,7 @@ BEN Really branching and itemizations
 =====================================
 
 This is the New BEN app contents of this repository will be for things such as Yeoman, Angular Mongo stuff etc. 
-If you are uncertain of branches or branch strategies please refer to `Using Branches in Stash:` goo.gl/nII75e
+If you are uncertain of branches or branch strategies please refer to `Using Branches in Stash:` http://goo.gl/nII75e
 
 
 Branch checkouts
@@ -11,13 +11,13 @@ Branch checkouts
 In order to utilize branching the following must be done
 
  * Clone the repository
- 	* CMD: `git clone http://stash.corbis.com/scm/bnr/benapp.git {somedirectory}`
+ * CMD: `git clone http://stash.corbis.com/scm/bnr/benapp.git {somedirectory}`
 
  * To View available branches in the repository
- 	* CMD: `git branch -va`
+ * CMD: `git branch -va`
 
  * Check out the remote branch
- 	* `git checkout {branchname} AKA: Development`
+ * `git checkout {branchname} AKA: Development`
 
 
 Branch prefixes
