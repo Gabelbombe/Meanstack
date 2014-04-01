@@ -1,0 +1,67 @@
+﻿.main-block > div:first-child
+{
+    width: 500px;
+}
+
+.main-block > div:last-child
+{
+    margin-left: 40px;
+    width: 390px;
+}
+
+.highlights 
+{
+    margin-bottom: 5px;
+}
+
+.highlights .row-fluid 
+{
+    border-bottom: solid thin #eee;
+}
+
+.highlights .row-fluid div 
+{
+    float: left;
+}
+
+.highlights .row-fluid .description
+{
+    padding: 20px 10px 0 20px;
+    text-align:left;
+    vertical-align: top;
+    width: 258px;
+}
+
+.highlights .row-fluid .image
+{
+    padding: 10px;
+    text-align: right;
+    width: 630px;
+}
+
+.highlights h2 
+{
+    line-height: 0.9;
+    margin-bottom: 0.2em
+}
+
+.highlights .row-fluid div.description span 
+{
+    font-size: 1.2em;
+    line-height: 1.25em
+}
+
+.letter-spacing 
+{
+    letter-spacing: -1px;
+}
+
+.js-request-access 
+{
+    width: 400px;
+}
+
+.logo
+{
+    margin: -40px 0 0 30px;
+}
