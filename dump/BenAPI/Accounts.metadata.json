@@ -1,1 +1,0 @@
-{ "options" : { "create" : "Accounts" }, "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "ns" : "BenAPI.Accounts", "name" : "_id_" } ] }
