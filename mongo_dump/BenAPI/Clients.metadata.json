@@ -1,0 +1,1 @@
+{ "options" : { "create" : "Clients" }, "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "ns" : "BenAPI.Clients", "name" : "_id_" } ] }

@@ -1,0 +1,1 @@
+{ "options" : { "create" : "Categories" }, "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "ns" : "BenAPI.Categories", "name" : "_id_" } ] }
