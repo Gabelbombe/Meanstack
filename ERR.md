@@ -15,7 +15,7 @@ Running "concurrent:test" (concurrent) task
     Error: spawn EPERM
         at errnoException (child_process.js:988:11)
         at Process.ChildProcess._handle.onexit (child_process.js:779:34) Use --force to continue.
-</code></p>
+</code></p>git
 
 
 Karma Warns
