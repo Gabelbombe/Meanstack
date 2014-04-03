@@ -1,0 +1,1 @@
+{ "options" : { "create" : "Impressions" }, "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "ns" : "BenAPI.Impressions", "name" : "_id_" } ] }
