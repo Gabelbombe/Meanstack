@@ -1,5 +1,5 @@
-BEN Really branching and itemizations
-=====================================
+BEN Really branching and itemization's
+======================================
 
 This is the New BEN app contents of this repository will be for things such as Yeoman, Angular Mongo stuff etc. 
 If you are uncertain of branches or branch strategies please refer to `Using Branches in Stash:` http://goo.gl/nII75e
@@ -78,3 +78,11 @@ Ruby and Gems
     - Y) to all other questions
  - gem install compass --pre 
  - gem install sass --pre
+
+
+To Run NODE API
+===============
+
+ * In some windows run: node bootapi.js
+ * Grunt serve functions as normal
+ * [WARN] Respawn issue currently if you try to require('./bootapi.js'); from server.js, will fix later
