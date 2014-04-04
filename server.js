@@ -1,8 +1,8 @@
 'use strict';
 
-var express = require('express'),
-    path = require('path'),
-    fs = require('fs'),
+var express  = require('express'),
+    path     = require('path'),
+    fs       = require('fs'),
     mongoose = require('mongoose');
 
 /**

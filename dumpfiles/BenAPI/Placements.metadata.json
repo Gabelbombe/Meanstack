@@ -1,0 +1,1 @@
+{ "options" : { "create" : "Placements" }, "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "ns" : "BenAPI.Placements", "name" : "_id_" } ] }
