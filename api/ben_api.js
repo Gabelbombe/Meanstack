@@ -2,12 +2,12 @@
 var express = require("express"),
     config  = require("./findconfig.js"),
     logger  = require("./helpers/logging.js")(),
-    mongo   = require("./helpers/mongo.js"),
+    mongo   = require("./helpers/mongo.js");
     app     = express();
 
-app.set('port', process.env.PORT || config.server.port);
-app.use(express.bodyParser());
-app.use(require("./helpers/accesslog.js"));
+    app.set('port', process.env.PORT || config.server.port);
+    app.use(express.bodyParser());
+    app.use(require("./helpers/accesslog.js"));
 
 
 // now we want to load the different end points
@@ -47,4 +47,4 @@ var syncs = new (require("./ends/sync.js"))(app, mongo, config);
     require("./helpers/cache.js").init(config.cache, logger);
     require("./helpers/logging.js")().info("app setup!");
 
-module.exports = app;
+//module.exports = app;
