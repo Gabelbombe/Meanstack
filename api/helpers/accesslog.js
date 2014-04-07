@@ -7,7 +7,8 @@ var sprintf     = require("util").format,
     path        = require('path'),
     alogger     = require("./logging.js")("access"),
     pLogger     = require("./logging.js")("performance"),
-    pThreshold  = require("../findconfig.js").pThreshold;
+    pThreshold  = require("../findconfig.js").pThreshold,
+    dateformat  = require('date-format-lite');
 
 module.exports = function(request, response, next) {
 	var starttime = Date.now();
