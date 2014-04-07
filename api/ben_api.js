@@ -47,4 +47,4 @@ var syncs = new (require("./ends/sync.js"))(app, mongo, config);
     require("./helpers/cache.js").init(config.cache, logger);
     require("./helpers/logging.js")().info("app setup!");
 
-//module.exports = app;
+module.exports = app;
