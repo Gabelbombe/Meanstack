@@ -18,4 +18,10 @@ read -p "Directory correct [Y/n]: " dir
 }
 
 rm -rf *    && git reset --hard HEAD
-npm install && bower install
+
+    npm   install   # install npm   deps
+    bower install   # install bower deps
+    grunt build     # compile all assets
+    grunt clean     # oikology
+
+    grunt serve     # 'Allo, 'Allo....
