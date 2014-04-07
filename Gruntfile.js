@@ -400,6 +400,32 @@ module.exports = function (grunt) {
       ]
     },
 
+    // By default, your `index.html`'s <!-- Usemin block --> will take care of
+    // minification. These next options are pre-configured if you do not wish
+    // to use the Usemin blocks.
+    // cssmin: {
+    //   dist: {
+    //     files: {
+    //       '<%= yeoman.dist %>/styles/main.css': [
+    //         '.tmp/styles/**/*.css',
+    //         '<%= yeoman.app %>/styles/**/*.css'
+    //       ]
+    //     }
+    //   }
+    // },
+    // uglify: {
+    //   dist: {
+    //     files: {
+    //       '<%= yeoman.dist %>/scripts/scripts.js': [
+    //         '<%= yeoman.dist %>/scripts/scripts.js'
+    //       ]
+    //     }
+    //   }
+    // },
+    // concat: {
+    //   dist: {}
+    // },
+
     // Test settings
     karma: {
       unit: {
@@ -508,17 +534,15 @@ module.exports = function (grunt) {
     'usemin'
   ]);
 
-  grunt.registerTask('heroku', function () {
-    grunt.log.warn('The `heroku` task has been deprecated. Use `grunt build` to build for deployment.');
-    grunt.task.run(['build']);
-  });
-
   grunt.loadNpmTasks('grunt-bower-task');
 
   grunt.initConfig({
-    bower: {
-      install: { /** grunt bower:install **/ }
-    }
+    bower: { install: { /** grunt bower:install **/ } }
+  });
+
+  grunt.registerTask('heroku', function () {
+    grunt.log.warn('The `heroku` task has been deprecated. Use `grunt build` to build for deployment.');
+    grunt.task.run(['build']);
   });
 
   grunt.registerTask('default', [
