@@ -3,14 +3,11 @@
 // https://github.com/petershaw/NodeJS-Apache-Like-AccessLog/blob/master/accesslog.js
 
 
-var sprintf     = require("util").format;
-var dateformat  = require('date-format-lite');
-var path        = require('path');
-var cluster     = require('cluster');
-  
-var alogger = require("./logging.js")("access");
-var performance_logger = require("./logging.js")("performance");
-var performance_threshold = require("../findconfig.js").performance_threshold;
+var sprintf     = require("util").format,
+    path        = require('path'),
+    alogger     = require("./logging.js")("access"),
+    pLogger     = require("./logging.js")("performance"),
+    pThreshold  = require("../findconfig.js").pThreshold;
 
 module.exports = function(request, response, next) {
 	var starttime = Date.now();
@@ -65,8 +62,8 @@ module.exports = function(request, response, next) {
   
   alogger.debug(p0+" "+p1+" "+p2+" "+p3);
   
-  if (performance_threshold !== false && rendertime > performance_threshold) {
-    performance_logger.warn(p1+" rendertime: "+rendertime);
+  if (pThreshold !== false && rendertime > pThreshold) {
+    pLogger.warn(p1+" rendertime: "+rendertime);
   }
 };
 
