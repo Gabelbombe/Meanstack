@@ -88,8 +88,13 @@ To Run NODE API
  * [WARN] Respawn issue currently if you try to require('./bootapi.js'); from server.js, will fix later
 
 
-Importing db from Mongo Dump
-============================
+Export db from Mongo
+--------------------
+
+ - mongodump --db (database_name) [ Optional: --collection (collection_name) ]
+
+Import db to Mongo Dump
+-----------------------
 
  - cd dumpfiles
  - mongorestore {database_name}
