@@ -86,3 +86,10 @@ To Run NODE API
  * In some windows run: node bootapi.js
  * Grunt serve functions as normal
  * [WARN] Respawn issue currently if you try to require('./bootapi.js'); from server.js, will fix later
+
+
+Importing db from Mongo Dump
+============================
+
+ - cd dumpfiles
+ - mongorestore {database_name}
