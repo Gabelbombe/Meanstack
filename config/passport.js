@@ -21,14 +21,7 @@ module.exports = function() {
 	});
 
 	// Initialize strategies
-<<<<<<< HEAD
 	utilities.walk('./config/strategies', /(.*)\.(js$|coffee$)/).forEach(function(strategyPath) {
 		require(path.resolve(strategyPath))();
 	});
 };
-=======
-	utilities.walk('./config/strategies').forEach(function(strategyPath) {
-		require(path.resolve(strategyPath))();
-	});
-};
->>>>>>> 635204acf7619b012d460dc3bf44724f171e3c31

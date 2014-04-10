@@ -9,14 +9,8 @@ var fs = require('fs');
 var _walk = function(root, includeRegex, excludeRegex, removePath) {
 	var output = [];
 	var directories = [];
-<<<<<<< HEAD
 
 	// First read through files 
-=======
-	includeRegex = includeRegex || /(.*)\.(js|coffee)$/;
-
-	// First read through files
->>>>>>> 635204acf7619b012d460dc3bf44724f171e3c31
 	fs.readdirSync(root).forEach(function(file) {
 		var newPath = root + '/' + file;
 		var stat = fs.statSync(newPath);
@@ -41,8 +35,4 @@ var _walk = function(root, includeRegex, excludeRegex, removePath) {
 /**
  * Exposing the walk function
  */
-<<<<<<< HEAD
 exports.walk = _walk;
-=======
-exports.walk = _walk;
->>>>>>> 635204acf7619b012d460dc3bf44724f171e3c31

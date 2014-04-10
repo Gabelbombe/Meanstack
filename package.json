@@ -1,23 +1,12 @@
 {
-<<<<<<< HEAD
 	"name": "benapp",
 	"description": "Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js",
 	"version": "0.0.1", 
 	"author": "Jd Daniel", 
-=======
-	"name": "meanjs",
-	"description": "Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js.",
-	"version": "0.2.2",
-	"private": false,
-	"author": "https://github.com/meanjs/mean/graphs/contributors",
+	"private": true,
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/meanjs/mean.git"
-	},
->>>>>>> 635204acf7619b012d460dc3bf44724f171e3c31
-	"engines": {
-		"node": "0.10.x",
-		"npm": "1.4.x"
+		"url": "https://stash.corbis.com/scm/bnr/benapp.git"
 	},
 	"scripts": {
 		"start": "grunt",

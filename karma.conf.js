@@ -6,11 +6,7 @@
 var utilities = require('./config/utilities');
 
 // Grabbing module files using the walk function
-<<<<<<< HEAD
 var modulesJSFiles = utilities.walk('./public/modules', /(.*)\.(js)/, null, null);
-=======
-var modulesJSFiles = utilities.walk('./public/modules', /(.*)\.js$/);
->>>>>>> 635204acf7619b012d460dc3bf44724f171e3c31
 
 // Karma configuration
 module.exports = function(config) {
@@ -21,19 +17,12 @@ module.exports = function(config) {
 		// List of files / patterns to load in the browser
 		files: [
 			'public/lib/angular/angular.js',
-<<<<<<< HEAD
 			'public/lib/angular-resource/angular-resource.js',
 			'public/lib/angular-mocks/angular-mocks.js', 
 			'public/lib/angular-cookies/angular-cookies.js', 
 			'public/lib/angular-animate/angular-animate.js', 
 			'public/lib/angular-touch/angular-touch.js', 
 			'public/lib/angular-sanitize/angular-sanitize.js', 
-=======
-			'public/lib/angular-animate/angular-animate.js',
-			'public/lib/angular-mocks/angular-mocks.js',
-			'public/lib/angular-cookies/angular-cookies.js',
-			'public/lib/angular-resource/angular-resource.js',
->>>>>>> 635204acf7619b012d460dc3bf44724f171e3c31
 			'public/lib/angular-bootstrap/ui-bootstrap.js',
 			'public/lib/angular-ui-utils/ui-utils.js',
 			'public/lib/angular-ui-router/release/angular-ui-router.js',
@@ -76,8 +65,4 @@ module.exports = function(config) {
 		// If true, it capture browsers, run tests and exit
 		singleRun: true
 	});
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 635204acf7619b012d460dc3bf44724f171e3c31

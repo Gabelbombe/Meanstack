@@ -9,10 +9,7 @@ var express = require('express'),
 	flash = require('connect-flash'),
 	config = require('./config'),
 	consolidate = require('consolidate'),
-<<<<<<< HEAD
 	swig = require('swig'),
-=======
->>>>>>> 635204acf7619b012d460dc3bf44724f171e3c31
 	path = require('path'),
 	utilities = require('./utilities');
 
@@ -21,11 +18,7 @@ module.exports = function(db) {
 	var app = express();
 
 	// Initialize models
-<<<<<<< HEAD
 	utilities.walk('./app/models', /(.*)\.(js$|coffee$)/).forEach(function(modelPath) {
-=======
-	utilities.walk('./app/models').forEach(function(modelPath) {
->>>>>>> 635204acf7619b012d460dc3bf44724f171e3c31
 		require(path.resolve(modelPath));
 	});
 
@@ -65,11 +58,7 @@ module.exports = function(db) {
 
 	// Application Configuration for development environment
 	app.configure('development', function() {
-<<<<<<< HEAD
 		// Enable logger 
-=======
-		// Enable logger
->>>>>>> 635204acf7619b012d460dc3bf44724f171e3c31
 		app.use(express.logger('dev'));
 
 		// Disable views cache
@@ -117,11 +106,7 @@ module.exports = function(db) {
 	app.use(express.static(config.root + '/public'));
 
 	// Load Routes
-<<<<<<< HEAD
 	utilities.walk('./app/routes', /(.*)\.(js$|coffee$)/).forEach(function(routePath) {
-=======
-	utilities.walk('./app/routes').forEach(function(routePath) {
->>>>>>> 635204acf7619b012d460dc3bf44724f171e3c31
 		require(path.resolve(routePath))(app);
 	});
 
@@ -148,8 +133,4 @@ module.exports = function(db) {
 	});
 
 	return app;
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 635204acf7619b012d460dc3bf44724f171e3c31

@@ -1,17 +1,10 @@
 'use strict';
 
 module.exports = {
-<<<<<<< HEAD
 	db: 'mongodb://localhost/benapp-travis',
 	port: 3001,
 	app: {
 		title: 'BenApp - Travis Environment'
-=======
-	db: 'mongodb://localhost/mean-travis',
-	port: 3001,
-	app: {
-		title: 'MEAN.JS - Travis Environment'
->>>>>>> 635204acf7619b012d460dc3bf44724f171e3c31
 	},
 	facebook: {
 		clientID: 'APP_ID',
