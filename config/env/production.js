@@ -1,7 +1,11 @@
 'use strict';
 
 module.exports = {
+<<<<<<< HEAD
 	db: 'mongodb://localhost/benapp',
+=======
+    db: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://localhost/mean',
+>>>>>>> 635204acf7619b012d460dc3bf44724f171e3c31
 	facebook: {
 		clientID: 'APP_ID',
 		clientSecret: 'APP_SECRET',

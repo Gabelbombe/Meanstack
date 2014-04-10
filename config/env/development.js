@@ -1,9 +1,15 @@
 'use strict';
 
 module.exports = {
+<<<<<<< HEAD
 	db: 'mongodb://localhost/benapp-dev',
 	app: {
 		title: 'BenApp - Development Environment'
+=======
+	db: 'mongodb://localhost/mean-dev',
+	app: {
+		title: 'MEAN.JS - Development Environment'
+>>>>>>> 635204acf7619b012d460dc3bf44724f171e3c31
 	},
 	facebook: {
 		clientID: 'APP_ID',

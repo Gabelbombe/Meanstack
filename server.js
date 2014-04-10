@@ -1,11 +1,14 @@
 'use strict';
 
 /**
+<<<<<<< HEAD
  * First we set the node enviornment variable if not set before
  */
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 /**
+=======
+>>>>>>> 635204acf7619b012d460dc3bf44724f171e3c31
  * Module dependencies.
  */
 var config = require('./config/config'),
@@ -31,4 +34,8 @@ app.listen(config.port);
 exports = module.exports = app;
 
 // Logging initialization
+<<<<<<< HEAD
 console.log('Express app started on port ' + config.port);
+=======
+console.log('Express app started on port ' + config.port);
+>>>>>>> 635204acf7619b012d460dc3bf44724f171e3c31
