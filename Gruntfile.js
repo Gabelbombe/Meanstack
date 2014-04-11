@@ -1,99 +1,36 @@
 'use strict';
 
 module.exports = function(grunt) {
-	// Project Configuration
-	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
-		watch: {
-			serverViews: {
-				files: ['app/views/**'],
-				options: {
-					livereload: true,
-				}
-			},
-			serverJS: {
-				files: ['gruntfile.js', 'server.js', 'config/**/*.js', 'app/**/*.js'],
-				tasks: ['jshint'],
-				options: {
-					livereload: true,
-				}
-			},
-			clientViews: {
-				files: ['public/modules/**/views/*.html'],
-				options: {
-					livereload: true,
-				}
-			},
-			clientJS: {
-				files: ['public/js/**/*.js', 'public/modules/**/*.js'],
-				tasks: ['jshint'],
-				options: {
-					livereload: true,
-				}
-			},
-			clientCSS: {
-				files: ['public/**/css/*.css'],
-				options: {
-					livereload: true,
-				}
-			}
-		},
-		jshint: {
-			all: {
-				src: ['gruntfile.js', 'server.js', 'config/**/*.js', 'app/**/*.js', 'public/js/**/*.js', 'public/modules/**/*.js'],
-				options: {
-					jshintrc: true
-				}
-			}
-		},
-		nodemon: {
-			dev: {
-				script: 'server.js',
-				options: {
-					nodeArgs: ['--debug']
-				}
-			}
-		},
-		concurrent: {
-			tasks: ['nodemon', 'watch'],
-			options: {
-				logConcurrentOutput: true
-			}
-		},
-		env: {
-			test: {
-				NODE_ENV: 'test'
-			}
-		},
-		mochaTest: {
-			src: ['app/tests/**/*.js'],
-			options: {
-				reporter: 'spec',
-				require: 'server.js'
-			}
-		},
-		karma: {
-			unit: {
-				configFile: 'karma.conf.js'
-			}
-		}
-	});
 
-	//Load NPM tasks 
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-mocha-test');
-	grunt.loadNpmTasks('grunt-karma');
-	grunt.loadNpmTasks('grunt-nodemon');
-	grunt.loadNpmTasks('grunt-concurrent');
-	grunt.loadNpmTasks('grunt-env');
+    var path    = require('path'),
+        process = require('process');
 
-	//Making grunt default to force in order not to break the project.
-	grunt.option('force', true);
+    require('load-grunt-config')(grunt, {
+        configPath: path.join(process.cwd(), 'grunt'), //path to task.js files, defaults to grunt dir
+        init: true, //auto grunt.initConfig
+        data: { //data passed into config.  Can use with <%= test %>
+            test: false
+        },
+        loadGruntTasks: { //can optionally pass options to load-grunt-tasks.  If you set to false, it will disable auto loading tasks.
+            pattern: 'grunt-*',
+            config:  require('./package.json'),
+            scope:   'devDependencies'
+        }
+    });
 
-	//Default task(s).
-	grunt.registerTask('default', ['jshint', 'concurrent']);
+    // making grunt default to force in order not to break the project.
+    grunt.option('force', true);
 
-	//Test task.
-	grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit']);
+    // test task.
+    grunt.registerTask('test', [
+        'env:test',
+        'mochaTest',
+        'karma:unit'
+    ]);
+
+    // default task(s).
+    grunt.registerTask('default', [
+        'jshint',
+        'concurrent'
+    ]);
 };
