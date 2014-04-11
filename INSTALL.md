@@ -1,6 +1,16 @@
 App generator base installation instructions
 ============================================
 
+Clone directions and getting your stack running
+-----------------------------------------------
+
+ - git clone https://{stashUserName}@stash.corbis.com/scm/bnr/benapp.git {somedirectory}
+ - start your local mongo service (Aka: mongod) [no configs are currently hooked up]
+ - cd {benappDirectory}
+ - npm install [node modeules not currently in repo]
+ - grunt
+
+
 Basic Readme's on stack
 -----------------------
 
